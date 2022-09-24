@@ -14,7 +14,15 @@ const port = process.env.PORT || 3000;
 const app = http.createServer((request, response) => {
   response.statusCode = 200; // HTTP_OK
   response.setHeader("Content-Type", "text/html");
-  response.end("Hello everybody. I had deployed NodeJS to Heroku succeed !");
+  response.write("<h1>Hello everyone !</h1>");
+  response.write("<h2>I am learning NodeJS</h2>");
+  response.write(
+    "<h3>My web page has been deployed to Heroku successfully !</h3>"
+  );
+  response.write(
+    "<img src='https://wiki.matbao.net/wp-content/uploads/2022/07/image-168-1024x576.png'>"
+  );
+  response.end();
 });
 
 //Bước 4: chạy web bằng cách listen port
